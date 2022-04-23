@@ -1,0 +1,4 @@
+using GeoJSON, GeoMakie, GLMakie, Downloads, Colors
+Greece = Downloads.download("https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/greece-prefectures.geojson")
+geo = GeoJSON.read(read(Greece))
+poly(geo, strokecolor = :deepskyblue3, color = (:darkslategray2, 0.5), strokewidth = 1)
